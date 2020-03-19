@@ -1,0 +1,29 @@
+﻿
+
+
+
+*-*-*
+
+
+<!--
+.style2 {
+	font-family:"Courier New", Courier, monospace;
+	font-size: 14px;
+}
+-->
+
+
+
+
+
+
+SIBM20 VBRR 242100 RRA
+
+AAXX 24214
+
+48097 21556 72405 10260 20229 40125 72996 85350 333 56490 58011=  
+
+
+
+
+

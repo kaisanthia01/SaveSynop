@@ -1,0 +1,39 @@
+﻿
+
+
+
+*-*-*
+
+
+<!--
+.style2 {
+	font-family:"Courier New", Courier, monospace;
+	font-size: 14px;
+}
+-->
+
+
+
+
+
+
+SIBM20 VBRR 291500 RRA
+
+AAXX 29154
+
+48097 32956 02303 10295 20234 40110 333 59011=
+
+
+
+
+
+  
+SIBM20 VBRR 291500 RRA
+
+AAXX 29154
+48097 32956 02303 10295 20234 40110 333 59011=  
+
+
+
+
+

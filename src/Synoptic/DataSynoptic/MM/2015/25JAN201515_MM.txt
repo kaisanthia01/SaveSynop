@@ -1,0 +1,32 @@
+﻿
+
+
+
+*-*-*
+
+
+<!--
+.style2 {
+	font-family:"Courier New", Courier, monospace;
+	font-size: 14px;
+}
+-->
+
+
+
+
+
+
+SIBM20 VBRR 251500
+
+NIL=  
+SIBM20 VBRR 251500 RRA
+
+AAXX 25154
+
+48097 32556 32201 10210 20175 40162 70121 83500 333 56900 58007=  
+
+
+
+
+

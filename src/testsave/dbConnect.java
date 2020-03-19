@@ -13,9 +13,6 @@ import java.sql.SQLException;
  * @author illusion
  */
 public class dbConnect {
-
-    private String url;
-
     Connection connect() throws ClassNotFoundException, SQLException {
         String driver = "oracle.jdbc.driver.OracleDriver";
         String url_1 = "jdbc:oracle:thin:@localhost:1521:xe";

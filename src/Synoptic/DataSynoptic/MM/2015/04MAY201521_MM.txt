@@ -1,0 +1,36 @@
+﻿
+
+
+
+*-*-*
+
+
+<!--
+.style2 {
+	font-family:"Courier New", Courier, monospace;
+	font-size: 14px;
+}
+-->
+
+
+
+
+
+
+SIBM20 VBRR 042100
+
+NIL=  
+SIBM20 VBRR 042100 RRA
+
+AAXX 04214
+48097 32956 01302 10280 20220 40096 333 58003=  
+SIBM20 VBRR 042100 RRA
+
+AAXX 04214
+
+48097 32956 01302 10280 20220 40096 333 58003=  
+
+
+
+
+

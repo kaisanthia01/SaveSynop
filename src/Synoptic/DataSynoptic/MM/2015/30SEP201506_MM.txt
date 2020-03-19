@@ -1,0 +1,31 @@
+﻿
+
+
+
+*-*-*
+
+
+<!--
+.style2 {
+	font-family:"Courier New", Courier, monospace;
+	font-size: 14px;
+}
+-->
+
+
+
+
+
+
+SMBM01 VBRR 300600 RRA
+
+AAXX 30064
+
+48035 32560 22201 10310 20225 40073 82800 333 56900
+
+59000=  
+
+
+
+
+
