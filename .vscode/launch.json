@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SynopticSave<SaveSynop_40a8ae1d>",
+            "request": "launch",
+            "mainClass": "Synoptic.SynopticSave",
+            "projectName": "SaveSynop_40a8ae1d"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestRead<SaveSynop_40a8ae1d>",
+            "request": "launch",
+            "mainClass": "testsave.TestRead",
+            "projectName": "SaveSynop_40a8ae1d"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestSave<SaveSynop_40a8ae1d>",
+            "request": "launch",
+            "mainClass": "testsave.TestSave",
+            "projectName": "SaveSynop_40a8ae1d"
+        }
+    ]
+}
