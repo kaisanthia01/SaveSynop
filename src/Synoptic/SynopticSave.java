@@ -13,11 +13,11 @@ public class SynopticSave {
 
     public static void main(String[] args)
             throws IOException, FileNotFoundException, ClassNotFoundException, SQLException {
-        for (int y = 2018; y < 2019; y++) {
+        for (int y = 2015; y < 2016; y++) {
             int yThai = y + 543;
-            for (int m = 3; m < 4; m++) {
-                for (int d = 14; d < 15; d++) {
-                    for (int h = 3; h < 4; h++) {
+            for (int m = 0; m < 1; m++) {
+                for (int d = 6; d < 7; d++) {
+                    for (int h = 2; h < 3; h++) {
                         // Set Day
                         String Day = null;
                         if (d < 10) {

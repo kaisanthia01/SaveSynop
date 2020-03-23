@@ -52,9 +52,14 @@ public class CheckGroup {
 
                     } else if (chk1.equals("1/")) {
 
+                    } else if (chk1.equals("10")) {
+
+                    } else if (chk1.equals("11")) {
+
+                    } else if (chk1.equals("1/")) {
+
                     } else {
                         fileData = fileData.substring(0, 25) + "10000 " + fileData.substring(25);
-
                     }
 
                     // check dewpoint
@@ -130,7 +135,7 @@ public class CheckGroup {
                         fileData = fileData.substring(0, 61) + "70000 " + fileData.substring(61);
 
                     }
-
+                    
                     chk8 = fileData.substring(67, 68);
                     if (chk8.equals("8")) {
 
