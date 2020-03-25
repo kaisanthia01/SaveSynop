@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class CheckGroup {
+
     public static void checkGroup(String day, String monthText, String year, String hour, String codeCountryName,
             int countData) throws FileNotFoundException, IOException, ClassNotFoundException, SQLException {
         FileReader Read00 = new FileReader("D:\\DataSynoptic\\" + codeCountryName + "\\" + day + monthText + year + hour
@@ -35,16 +36,19 @@ public class CheckGroup {
                     // check temp
                     chk1 = fileData.substring(25, 27);
                     if (chk1.equals("10") && (fileData.substring(30, 31).equals("="))) {
-                        fileData = fileData.substring(0, 30)
-                                + " 20000 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        //fileData = fileData.substring(0, 30)
+                        //        + " 20000 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        continue;
 
                     } else if (chk1.equals("11") && (fileData.substring(30, 31).equals("="))) {
-                        fileData = fileData.substring(0, 30)
-                                + " 20000 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        //fileData = fileData.substring(0, 30)
+                        //        + " 20000 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        continue;
 
                     } else if (chk1.equals("1/") && (fileData.substring(30, 31).equals("="))) {
-                        fileData = fileData.substring(0, 30)
-                                + " 20000 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        //fileData = fileData.substring(0, 30)
+                        //        + " 20000 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        continue;
 
                     } else if (chk1.equals("10")) {
 
@@ -59,22 +63,26 @@ public class CheckGroup {
                     } else if (chk1.equals("1/")) {
 
                     } else {
-                        fileData = fileData.substring(0, 25) + "10000 " + fileData.substring(25);
+                        //fileData = fileData.substring(0, 25) + "10000 " + fileData.substring(25);
+                        continue;
                     }
 
                     // check dewpoint
                     chk2 = fileData.substring(31, 33);
                     if (chk2.equals("20") && (fileData.substring(36, 37).equals("="))) {
-                        fileData = fileData.substring(0, 36)
-                                + " 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        //fileData = fileData.substring(0, 36)
+                        //        + " 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        continue;
 
                     } else if (chk2.equals("21") && (fileData.substring(36, 37).equals("="))) {
-                        fileData = fileData.substring(0, 36)
-                                + " 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        //fileData = fileData.substring(0, 36)
+                        //        + " 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        continue;
 
                     } else if (chk2.equals("2/") && (fileData.substring(36, 37).equals("="))) {
-                        fileData = fileData.substring(0, 36)
-                                + " 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        //fileData = fileData.substring(0, 36)
+                        //        + " 30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        continue;
 
                     } else if (chk2.equals("20")) {
 
@@ -83,22 +91,27 @@ public class CheckGroup {
                     } else if (chk2.equals("2/")) {
 
                     } else {
-                        fileData = fileData.substring(0, 31) + "20000 " + fileData.substring(31);
+                        //fileData = fileData.substring(0, 31) + "20000 " + fileData.substring(31);
+                        continue;
 
                     }
 
                     // check station pressure
                     if (fileData.substring(37, 41).equals("333=")) {
-                        fileData = fileData.substring(0, 37)
-                                + "30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        //fileData = fileData.substring(0, 37)
+                        //        + "30000 40000 50000 60000 70000 80000 333 10/// 58000 60000 70000";
+                        continue;
+
                     } else if (fileData.substring(37, 41).equals("333 ")) {
-                        fileData = fileData.substring(0, 37) + "30000 " + fileData.substring(37);
+                        //fileData = fileData.substring(0, 37) + "30000 " + fileData.substring(37);
+                        continue;
+
                     } else {
                         chk3 = fileData.substring(37, 38);
                         if (chk3.equals("3")) {
 
                         } else {
-                            fileData = fileData.substring(0, 37) + "30000 " + fileData.substring(37);
+                            fileData = fileData.substring(0, 37) + "3//// " + fileData.substring(37);
 
                         }
                     }
@@ -108,7 +121,7 @@ public class CheckGroup {
                     if (chk4.equals("4")) {
 
                     } else {
-                        fileData = fileData.substring(0, 43) + "40000 " + fileData.substring(43);
+                        fileData = fileData.substring(0, 43) + "4//// " + fileData.substring(43);
 
                     }
 
@@ -116,7 +129,7 @@ public class CheckGroup {
                     if (chk5.equals("5")) {
 
                     } else {
-                        fileData = fileData.substring(0, 49) + "50000 " + fileData.substring(49);
+                        fileData = fileData.substring(0, 49) + "5//// " + fileData.substring(49);
 
                     }
 
@@ -124,7 +137,7 @@ public class CheckGroup {
                     if (chk6.equals("6")) {
 
                     } else {
-                        fileData = fileData.substring(0, 55) + "60000 " + fileData.substring(55);
+                        fileData = fileData.substring(0, 55) + "6//// " + fileData.substring(55);
 
                     }
 
@@ -132,36 +145,36 @@ public class CheckGroup {
                     if (chk7.equals("7")) {
 
                     } else {
-                        fileData = fileData.substring(0, 61) + "70000 " + fileData.substring(61);
+                        fileData = fileData.substring(0, 61) + "7//// " + fileData.substring(61);
 
                     }
-                    
+
                     chk8 = fileData.substring(67, 68);
                     if (chk8.equals("8")) {
 
                     } else {
-                        fileData = fileData.substring(0, 67) + "80000 " + fileData.substring(67);
+                        fileData = fileData.substring(0, 67) + "8//// " + fileData.substring(67);
 
                     }
 
                     chk9 = fileData.substring(73, 76);
                     if (chk9.equals("222") && (fileData.substring(76, 77).equals("="))) {
-                        fileData = fileData.substring(0, 72) + " 333 10/// 58000 60000 70000";
+                        fileData = fileData.substring(0, 72) + " 333 10/// 58/// 6//// 7////";
 
                     } else if (chk9.equals("222") && (fileData.substring(76, 78).equals(" ="))) {
-                        fileData = fileData.substring(0, 72) + " 333 10/// 58000 60000 70000";
+                        fileData = fileData.substring(0, 72) + " 333 10/// 58/// 6//// 7////";
 
                     } else if (chk9.equals("222")) {
-                        fileData = fileData.substring(0, 72) + " 333 10/// 58000 60000 70000";
+                        fileData = fileData.substring(0, 72) + " 333 10/// 58/// 6//// 7////";
 
                     }
 
                     String chk10 = fileData.substring(73, 76);
                     if (chk10.equals("333") && (fileData.substring(76, 77).equals("="))) {
-                        fileData = fileData.substring(0, 72) + " 333 10/// 58000 60000 70000";
+                        fileData = fileData.substring(0, 72) + " 333 10/// 58/// 6//// 7////";
 
                     } else if (chk10.equals("333") && (fileData.substring(76, 78).equals(" ="))) {
-                        fileData = fileData.substring(0, 72) + " 333 10/// 58000 60000 70000";
+                        fileData = fileData.substring(0, 72) + " 333 10/// 58/// 6//// 7////";
 
                     } else if (chk10.equals("333")) {
 
@@ -180,22 +193,22 @@ public class CheckGroup {
 
                     String chk12 = fileData.substring(77, 79);
                     if ((chk12.equals("10") && (fileData.substring(82, 83).equals("=")))) {
-                        fileData = fileData.substring(0, 82) + " 58000 60000 70000";
+                        fileData = fileData.substring(0, 82) + " 58/// 6//// 7////";
 
                     } else if ((chk12.equals("11") && (fileData.substring(82, 83).equals("=")))) {
-                        fileData = fileData.substring(0, 82) + " 58000 60000 70000";
+                        fileData = fileData.substring(0, 82) + " 58/// 6//// 7////";
 
                     } else if ((chk12.equals("20") && (fileData.substring(82, 83).equals("=")))) {
-                        fileData = fileData.substring(0, 82) + " 58000 60000 70000";
+                        fileData = fileData.substring(0, 82) + " 58/// 6//// 7////";
 
                     } else if ((chk12.equals("21") && (fileData.substring(82, 83).equals("=")))) {
-                        fileData = fileData.substring(0, 82) + " 58000 60000 70000";
+                        fileData = fileData.substring(0, 82) + " 58/// 6//// 7////";
 
                     } else if ((chk12.equals("2/") && (fileData.substring(82, 83).equals("=")))) {
-                        fileData = fileData.substring(0, 82) + " 58000 60000 70000";
+                        fileData = fileData.substring(0, 82) + " 58/// 6//// 7////";
 
                     } else if ((chk12.equals("1/") && (fileData.substring(82, 83).equals("=")))) {
-                        fileData = fileData.substring(0, 82) + " 58000 60000 70000";
+                        fileData = fileData.substring(0, 82) + " 58/// 6//// 7////";
 
                     } else if (chk12.equals("10")) {
 
@@ -227,7 +240,7 @@ public class CheckGroup {
                     String chk14 = fileData.substring(83, 85);
                     if (chk14.equals("50") && (fileData.substring(88, 89).equals("="))
                             || chk14.equals("50") && (fileData.substring(89, 90).equals("="))) {
-                        fileData = fileData.substring(0, 83) + "58000 60000 70000";
+                        fileData = fileData.substring(0, 83) + "58/// 6//// 7////";
 
                     } else if (chk14.equals("50")) {
                         fileData = fileData.substring(0, 83) + "" + fileData.substring(89);
@@ -238,7 +251,7 @@ public class CheckGroup {
                     chk14 = fileData.substring(83, 85);
                     if (chk14.equals("51") && (fileData.substring(88, 89).equals("="))
                             || chk14.equals("51") && (fileData.substring(89, 90).equals("="))) {
-                        fileData = fileData.substring(0, 83) + "58000 60000 70000";
+                        fileData = fileData.substring(0, 83) + "58/// 6//// 7////";
 
                     } else if (chk14.equals("51")) {
                         fileData = fileData.substring(0, 83) + "" + fileData.substring(89);
@@ -249,7 +262,7 @@ public class CheckGroup {
                     chk14 = fileData.substring(83, 85);
                     if (chk14.equals("52") && (fileData.substring(88, 89).equals("="))
                             || chk14.equals("52") && (fileData.substring(89, 90).equals("="))) {
-                        fileData = fileData.substring(0, 83) + "58000 60000 70000";
+                        fileData = fileData.substring(0, 83) + "58/// 6//// 7////";
 
                     } else if (chk14.equals("52")) {
                         fileData = fileData.substring(0, 83) + "" + fileData.substring(89);
@@ -260,7 +273,7 @@ public class CheckGroup {
                     chk14 = fileData.substring(83, 85);
                     if (chk14.equals("53") && (fileData.substring(88, 89).equals("="))
                             || chk14.equals("53") && (fileData.substring(89, 90).equals("="))) {
-                        fileData = fileData.substring(0, 83) + "58000 60000 70000";
+                        fileData = fileData.substring(0, 83) + "58/// 6//// 7////";
 
                     } else if (chk14.equals("53")) {
                         fileData = fileData.substring(0, 83) + "" + fileData.substring(89);
@@ -271,7 +284,7 @@ public class CheckGroup {
                     chk14 = fileData.substring(83, 85);
                     if (chk14.equals("54") && (fileData.substring(88, 89).equals("="))
                             || chk14.equals("54") && (fileData.substring(89, 90).equals("="))) {
-                        fileData = fileData.substring(0, 83) + "58000 60000 70000";
+                        fileData = fileData.substring(0, 83) + "58/// 6//// 7////";
 
                     } else if (chk14.equals("54")) {
                         fileData = fileData.substring(0, 83) + "" + fileData.substring(89);
@@ -282,7 +295,7 @@ public class CheckGroup {
                     chk14 = fileData.substring(83, 85);
                     if (chk14.equals("55") && (fileData.substring(88, 89).equals("="))
                             || chk14.equals("55") && (fileData.substring(89, 90).equals("="))) {
-                        fileData = fileData.substring(0, 83) + "58000 60000 70000";
+                        fileData = fileData.substring(0, 83) + "58/// 6//// 7////";
 
                     } else if (chk14.equals("55")) {
                         fileData = fileData.substring(0, 83) + "" + fileData.substring(89);
@@ -293,7 +306,7 @@ public class CheckGroup {
                     chk14 = fileData.substring(83, 85);
                     if (chk14.equals("56") && (fileData.substring(88, 89).equals("="))
                             || chk14.equals("56") && (fileData.substring(89, 90).equals("="))) {
-                        fileData = fileData.substring(0, 83) + "58000 60000 70000";
+                        fileData = fileData.substring(0, 83) + "58/// 6//// 7////";
 
                     } else if (chk14.equals("56")) {
                         fileData = fileData.substring(0, 83) + "" + fileData.substring(89);
@@ -304,7 +317,7 @@ public class CheckGroup {
                     chk14 = fileData.substring(83, 85);
                     if (chk14.equals("57") && (fileData.substring(88, 89).equals("="))
                             || chk14.equals("57") && (fileData.substring(89, 90).equals("="))) {
-                        fileData = fileData.substring(0, 83) + "58000 60000 70000";
+                        fileData = fileData.substring(0, 83) + "58/// 6//// 7////";
 
                     } else if (chk14.equals("57")) {
                         fileData = fileData.substring(0, 83) + "" + fileData.substring(89);
@@ -319,35 +332,35 @@ public class CheckGroup {
                     if (chk14.equals("58") || chk14.equals("59") || chk14.equals("5/")) {
 
                     } else {
-                        fileData = fileData.substring(0, 83) + "58000 " + fileData.substring(89);
+                        fileData = fileData.substring(0, 83) + "58/// " + fileData.substring(89);
 
                     }
 
                     if (fileData.substring(88, 89).equals("=")) {
-                        fileData = fileData.substring(0, 88) + " 60000 70000";
+                        fileData = fileData.substring(0, 88) + " 6//// 7////";
 
                     } else if (fileData.substring(89, 90).equals("6")) {
                         String chk17 = fileData.substring(94, 95);
                         if (chk17.equals("=")) {
-                            fileData = fileData.substring(0, 94) + " 70000";
+                            fileData = fileData.substring(0, 94) + " 7////";
 
                         } else if (chk17.equals("7")) {
                             fileData = fileData.substring(0, 100);
 
                         } else {
-                            fileData = fileData.substring(0, 94) + " 70000";
+                            fileData = fileData.substring(0, 94) + " 7////";
                         }
                     } else if (fileData.substring(89, 90).equals("7")) {
-                        fileData = fileData.substring(0, 89) + "60000 " + fileData.substring(94);
+                        fileData = fileData.substring(0, 89) + "6//// " + fileData.substring(94);
 
                     } else if (fileData.substring(89, 90).equals("8")) {
-                        fileData = fileData.substring(0, 88) + " 60000 70000";
+                        fileData = fileData.substring(0, 88) + " 6//// 7////";
 
                     } else {
-                        fileData = fileData.substring(0, 88) + " 60000 70000";
+                        fileData = fileData.substring(0, 88) + " 6//// 7////";
 
                     }
-                    // System.out.println(fileData);
+                    //System.out.println(fileData);
 
                     // section
                     section = fileData.substring(2, 4);

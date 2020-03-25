@@ -121,7 +121,7 @@ public class CheckImportData {
                         + "','" + dataArray[i][34] + "','" + dataArray[i][35] + "','" + dataArray[i][36] + "','" + dataArray[i][37]
                         + "','" + dataArray[i][38] + "','" + dataArray[i][39] + "','" + dataArray[i][40] + "','" + dataArray[i][41]
                         + "','" + dataArray[i][42] + "')");
-                
+
             } catch (SQLException e) {
                 System.out.println(e);
                 continue;

@@ -2,7 +2,6 @@ package Synoptic;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,9 +14,9 @@ public class SynopticSave {
             throws IOException, FileNotFoundException, ClassNotFoundException, SQLException {
         for (int y = 2015; y < 2016; y++) {
             int yThai = y + 543;
-            for (int m = 0; m < 1; m++) {
-                for (int d = 6; d < 7; d++) {
-                    for (int h = 2; h < 3; h++) {
+            for (int m = 0; m < 12; m++) {
+                for (int d = 1; d < 32; d++) {
+                    for (int h = 0; h < 8; h++) {
                         // Set Day
                         String Day = null;
                         if (d < 10) {
@@ -59,7 +58,7 @@ public class SynopticSave {
                         Year = (Year.substring(2, 4));
 
                         // Set Hour
-                        String[] time = { "00", "03", "06", "09", "12", "15", "18", "21" };
+                        String[] time = {"00", "03", "06", "09", "12", "15", "18", "21"};
 
                         String country_code = "48";
                         String codeCountryName = "MM";
