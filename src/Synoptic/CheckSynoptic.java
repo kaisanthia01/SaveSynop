@@ -54,16 +54,63 @@ public class CheckSynoptic {
                         fw.write(keepData);
                     }
 
+                } else if (line.substring(0, 3).equals("  0") || line.substring(0, 3).equals("  1")
+                        || line.substring(0, 3).equals("  2") || line.substring(0, 3).equals("  3")
+                        || line.substring(0, 3).equals("  4") || line.substring(0, 3).equals("  5")
+                        || line.substring(0, 3).equals("  6") || line.substring(0, 3).equals("  7")
+                        || line.substring(0, 3).equals("  8") || line.substring(0, 3).equals("  9")) {
+                    int lineLength = line.length();
+                    int BeforelineLength = lineLength - 1;
+                    if (line.substring(BeforelineLength, lineLength).equals("=")) {
+                        keepData = line.substring(1) + "\n";
+                        fw.write(keepData);
+                    } else {
+                        keepData = line.substring(1) + " ";
+                        fw.write(keepData);
+                    }
+
+                } else if (line.substring(0, 4).equals("   0") || line.substring(0, 4).equals("   1")
+                        || line.substring(0, 4).equals("   2") || line.substring(0, 4).equals("   3")
+                        || line.substring(0, 4).equals("   4") || line.substring(0, 4).equals("   5")
+                        || line.substring(0, 4).equals("   6") || line.substring(0, 4).equals("   7")
+                        || line.substring(0, 4).equals("   8") || line.substring(0, 4).equals("   9")) {
+                    int lineLength = line.length();
+                    int BeforelineLength = lineLength - 1;
+                    if (line.substring(BeforelineLength, lineLength).equals("=")) {
+                        keepData = line.substring(1) + "\n";
+                        fw.write(keepData);
+                    } else {
+                        keepData = line.substring(1) + " ";
+                        fw.write(keepData);
+                    }
+
+                } else if (line.substring(0, 5).equals("    0") || line.substring(0, 5).equals("    1")
+                        || line.substring(0, 5).equals("    2") || line.substring(0, 5).equals("    3")
+                        || line.substring(0, 5).equals("    4") || line.substring(0, 5).equals("    5")
+                        || line.substring(0, 5).equals("    6") || line.substring(0, 5).equals("    7")
+                        || line.substring(0, 5).equals("    8") || line.substring(0, 5).equals("    9")) {
+                    int lineLength = line.length();
+                    int BeforelineLength = lineLength - 1;
+                    if (line.substring(BeforelineLength, lineLength).equals("=")) {
+                        keepData = line.substring(1) + "\n";
+                        fw.write(keepData);
+                    } else {
+                        keepData = line.substring(1) + " ";
+                        fw.write(keepData);
+                    }
+
                 } else if (line.substring(0, 1).equals("=")) {
                     keepData = "=\n";
                     fw.write(keepData);
                 } else {
-                    
+                    keepData = "\n";
+                    fw.write(keepData);
                 }
 
             } catch (StringIndexOutOfBoundsException e) {
+                
             }
-            // System.out.println(keepData);
+            //System.out.println(keepData);
         }
 
         fr.close();

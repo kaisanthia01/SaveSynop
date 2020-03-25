@@ -56,12 +56,6 @@ public class CheckGroup {
 
                     } else if (chk1.equals("1/")) {
 
-                    } else if (chk1.equals("10")) {
-
-                    } else if (chk1.equals("11")) {
-
-                    } else if (chk1.equals("1/")) {
-
                     } else {
                         //fileData = fileData.substring(0, 25) + "10000 " + fileData.substring(25);
                         continue;
@@ -177,6 +171,9 @@ public class CheckGroup {
                         fileData = fileData.substring(0, 72) + " 333 10/// 58/// 6//// 7////";
 
                     } else if (chk10.equals("333")) {
+
+                    } else if (chk10.equals(" 33")) {
+                        fileData = fileData.substring(0, 72) + "333" + fileData.substring(76);
 
                     } else {
                         fileData = fileData.substring(0, 72) + " 333 " + fileData.substring(73);
