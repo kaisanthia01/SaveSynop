@@ -115,8 +115,8 @@ public class CheckGroup {
                     if (chk4.equals("4")) {
 
                     } else {
-                        fileData = fileData.substring(0, 43) + "4//// " + fileData.substring(43);
-
+                        //fileData = fileData.substring(0, 43) + "4//// " + fileData.substring(43);
+                        continue;
                     }
 
                     chk5 = fileData.substring(49, 50);
