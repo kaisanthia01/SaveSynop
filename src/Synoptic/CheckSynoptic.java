@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class CheckSynoptic {
+
     public static void checkSynoptic(String day, String monthText, String year, String hour, String codeCountryName,
             String country_code) throws IOException, FileNotFoundException, ClassNotFoundException, SQLException {
         FileReader fr = new FileReader("D:\\DataSynoptic\\" + codeCountryName + "\\" + day + monthText + year + hour
@@ -22,6 +23,11 @@ public class CheckSynoptic {
                 int Beforeline1Length = line1Length - 1;
                 if (line.substring(Beforeline1Length, line1Length).equals(" ")) {
                     line = line.substring(0, Beforeline1Length);
+                } else if (line.substring(0, 1).equals("=")) {
+                    keepData = line + "\n";
+                    fw.write(keepData);
+                    continue;
+                } else {
                 }
 
                 if (line.substring(0, 1).equals("0") || line.substring(0, 1).equals("1")
@@ -99,16 +105,13 @@ public class CheckSynoptic {
                         fw.write(keepData);
                     }
 
-                } else if (line.substring(0, 1).equals("=")) {
-                    keepData = "=\n";
-                    fw.write(keepData);
                 } else {
                     keepData = "\n";
                     fw.write(keepData);
                 }
 
             } catch (StringIndexOutOfBoundsException e) {
-                
+
             }
             //System.out.println(keepData);
         }

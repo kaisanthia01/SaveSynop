@@ -145,12 +145,26 @@ public class CheckGroup {
 
                     chk8 = fileData.substring(67, 68);
                     if (chk8.equals("8")) {
+                        if (fileData.substring(68, 69).equals(" ")) {
+                            fileData = fileData.substring(0, 67) + "8//// " + fileData.substring(67);
+                            
+                        } else if (fileData.substring(69, 70).equals(" ")) {
+                            fileData = fileData.substring(0, 69) + "/// " + fileData.substring(70);
+                            
+                        } else if (fileData.substring(70, 71).equals(" ")) {
+                            fileData = fileData.substring(0, 70) + "// " + fileData.substring(71);
+                            
+                        } else if (fileData.substring(71, 72).equals(" ")) {
+                            fileData = fileData.substring(0, 71) + "/ " + fileData.substring(72);
+                            
+                        } else {
 
+                        }
                     } else {
                         fileData = fileData.substring(0, 67) + "8//// " + fileData.substring(67);
 
                     }
-
+                    
                     chk9 = fileData.substring(73, 76);
                     if (chk9.equals("222") && (fileData.substring(76, 77).equals("="))) {
                         fileData = fileData.substring(0, 72) + " 333 10/// 58/// 6//// 7////";
@@ -180,14 +194,13 @@ public class CheckGroup {
 
                     }
 
-                    String chk11 = fileData.substring(77, 78);
+                    /*String chk11 = fileData.substring(77, 78);
                     if (chk11.equals("0")) {
                         fileData = fileData.substring(0, 76) + " " + fileData.substring(83);
 
                     } else {
 
-                    }
-
+                    }*/
                     String chk12 = fileData.substring(77, 79);
                     if ((chk12.equals("10") && (fileData.substring(82, 83).equals("=")))) {
                         fileData = fileData.substring(0, 82) + " 58/// 6//// 7////";
@@ -505,7 +518,7 @@ public class CheckGroup {
         buffer.close();
         read.close();
         // System.out.println(countRecord);
-        CheckImportData checkImportData = new CheckImportData();
-        checkImportData.addToArray(path, countRecord);
+        //CheckImportData checkImportData = new CheckImportData();
+        //checkImportData.addToArray(path, countRecord);
     }
 }
