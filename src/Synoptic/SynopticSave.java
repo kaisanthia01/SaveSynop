@@ -12,7 +12,7 @@ public class SynopticSave {
 
     public static void main(String[] args)
             throws IOException, FileNotFoundException, ClassNotFoundException, SQLException {
-        for (int y = 2019; y < 2020; y++) {
+        for (int y = 2015; y < 2020; y++) {
             int yThai = y + 543;
             for (int m = 0; m < 12; m++) {
                 for (int d = 1; d < 32; d++) {
@@ -66,13 +66,13 @@ public class SynopticSave {
                         //String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=VTBB&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VTBB");
                         //System.out.println(strURL);
                         //2.(MM)MYANMAR
-                        String country_code = "48";
-                        String codeCountryName = "MM";
-                        String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=VBRR&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VBRR");
-                        //3.(LA)LAOS
                         //String country_code = "48";
-                        //String codeCountryName = "LA";
-                        //String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=VLIV&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VLIV");
+                        //String codeCountryName = "MM";
+                        //String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=VBRR&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VBRR");
+                        //3.(LA)LAOS
+                        String country_code = "48";
+                        String codeCountryName = "LA";
+                        String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=VLIV&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VLIV");
                         //4.(VN)VIETNAM
                         //String country_code = "48";
                         //String codeCountryName = "VN";

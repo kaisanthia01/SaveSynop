@@ -19,14 +19,29 @@ public class CheckSelect {
         int countData = 0;
         while ((line = br.readLine()) != null) {
             try {
-                if (!line.substring(6, 9).equals("NIL") && !line.substring(6, 10).equals(" NIL")
-                        && !line.substring(6, 11).equals("  NIL") && !line.substring(6, 12).equals("   NIL")) {
-                    keepData = day + hour + "00 " + line + "\n";
-                    fw.write(keepData);
+                if (country_code.length() > 2) {
+                    String code_1 = (country_code.substring(0, 2));
+                    String code_2 = (country_code.substring(2, 4));
+
+                    if (line.substring(0, 2).equals(code_1) || line.substring(0, 2).equals(code_2)) {
+                        if (!line.substring(6, 9).equals("NIL") && !line.substring(6, 10).equals(" NIL")
+                                && !line.substring(6, 11).equals("  NIL") && !line.substring(6, 12).equals("   NIL")) {
+                            keepData = day + hour + "00 " + line + "\n";
+                            fw.write(keepData);
+                        }
+                    }
+                } else {
+                    if (line.substring(0, 2).equals(country_code)) {
+                        if (!line.substring(6, 9).equals("NIL") && !line.substring(6, 10).equals(" NIL")
+                                && !line.substring(6, 11).equals("  NIL") && !line.substring(6, 12).equals("   NIL")) {
+                            keepData = day + hour + "00 " + line + "\n";
+                            fw.write(keepData);
+                        }
+                    }
                 }
             } catch (StringIndexOutOfBoundsException e) {
+                continue;
             }
-
             countData++;
             // System.out.println(keepData);
         }

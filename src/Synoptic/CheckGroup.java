@@ -524,7 +524,7 @@ public class CheckGroup {
         buffer.close();
         read.close();
         // System.out.println(countRecord);
-        CheckImportData checkImportData = new CheckImportData();
-        checkImportData.addToArray(path, countRecord);
+        //CheckImportData checkImportData = new CheckImportData();
+        //checkImportData.addToArray(path, countRecord);
     }
 }

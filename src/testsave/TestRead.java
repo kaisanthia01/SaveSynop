@@ -13,7 +13,6 @@ public class TestRead {
 
     public static void main(String[] args)
             throws IOException, FileNotFoundException, ClassNotFoundException, SQLException {
-        // TODO code application logic here
         for (int y = 2015; y < 2016; y++) {
             int yThai = y + 543;
             for (int m = 0; m < 12; m++) {
