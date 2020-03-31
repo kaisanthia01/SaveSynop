@@ -12,11 +12,11 @@ public class SynopticSave {
 
     public static void main(String[] args)
             throws IOException, FileNotFoundException, ClassNotFoundException, SQLException {
-        for (int y = 2015; y < 2020; y++) {
+        for (int y = 2019; y < 2020; y++) {
             int yThai = y + 543;
-            for (int m = 0; m < 12; m++) {
-                for (int d = 1; d < 32; d++) {
-                    for (int h = 0; h < 8; h++) {
+            for (int m = 11; m < 12; m++) {
+                for (int d = 30; d < 31; d++) {
+                    for (int h = 4; h < 5; h++) {
                         // Set Day
                         String Day = null;
                         if (d < 10) {
@@ -70,13 +70,13 @@ public class SynopticSave {
                         //String codeCountryName = "MM";
                         //String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=VBRR&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VBRR");
                         //3.(LA)LAOS
-                        String country_code = "48";
-                        String codeCountryName = "LA";
-                        String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=VLIV&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VLIV");
-                        //4.(VN)VIETNAM
                         //String country_code = "48";
-                        //String codeCountryName = "VN";
-                        //String strURL= ("http://www.gts.tmd.go.th/examtest/all.php?ld=VTBB&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VNNN");
+                        //String codeCountryName = "LA";
+                        //String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=VLIV&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VLIV");
+                        //4.(VN)VIETNAM
+                        String country_code = "48";
+                        String codeCountryName = "VN";
+                        String strURL= ("http://www.gts.tmd.go.th/examtest/all.php?ld=VTBB&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VNNN");
                         //5.(MY)MALAYSIA
                         //String country_code = "4896";
                         //String codeCountryName = "MY";
