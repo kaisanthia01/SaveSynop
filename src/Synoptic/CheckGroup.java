@@ -107,7 +107,21 @@ public class CheckGroup {
                     } else {
                         chk3 = fileData.substring(37, 38);
                         if (chk3.equals("3")) {
+                            if (fileData.substring(38, 39).equals(" ")) {
+                                fileData = fileData.substring(0, 38) + "//// " + fileData.substring(38);
 
+                            } else if (fileData.substring(39, 40).equals(" ")) {
+                                fileData = fileData.substring(0, 39) + "/// " + fileData.substring(39);
+
+                            } else if (fileData.substring(40, 41).equals(" ")) {
+                                fileData = fileData.substring(0, 40) + "// " + fileData.substring(40);
+
+                            } else if (fileData.substring(41, 42).equals(" ")) {
+                                fileData = fileData.substring(0, 41) + "/ " + fileData.substring(41);
+
+                            } else {
+
+                            }
                         } else {
                             fileData = fileData.substring(0, 37) + "3//// " + fileData.substring(37);
 
@@ -117,7 +131,21 @@ public class CheckGroup {
                     // check slp
                     chk4 = fileData.substring(43, 44);
                     if (chk4.equals("4")) {
+                        if (fileData.substring(44, 45).equals(" ")) {
+                            fileData = fileData.substring(0, 44) + "//// " + fileData.substring(44);
 
+                        } else if (fileData.substring(45, 46).equals(" ")) {
+                            fileData = fileData.substring(0, 45) + "/// " + fileData.substring(45);
+
+                        } else if (fileData.substring(46, 47).equals(" ")) {
+                            fileData = fileData.substring(0, 46) + "// " + fileData.substring(46);
+
+                        } else if (fileData.substring(47, 48).equals(" ")) {
+                            fileData = fileData.substring(0, 47) + "/ " + fileData.substring(47);
+
+                        } else {
+
+                        }
                     } else {
                         // fileData = fileData.substring(0, 43) + "4//// " + fileData.substring(43);
                         continue;
@@ -125,7 +153,21 @@ public class CheckGroup {
 
                     chk5 = fileData.substring(49, 50);
                     if (chk5.equals("5")) {
+                        if (fileData.substring(50, 51).equals(" ")) {
+                            fileData = fileData.substring(0, 50) + "//// " + fileData.substring(50);
 
+                        } else if (fileData.substring(51, 52).equals(" ")) {
+                            fileData = fileData.substring(0, 51) + "/// " + fileData.substring(51);
+
+                        } else if (fileData.substring(52, 53).equals(" ")) {
+                            fileData = fileData.substring(0, 52) + "// " + fileData.substring(52);
+
+                        } else if (fileData.substring(53, 54).equals(" ")) {
+                            fileData = fileData.substring(0, 53) + "/ " + fileData.substring(53);
+
+                        } else {
+
+                        }
                     } else {
                         fileData = fileData.substring(0, 49) + "5//// " + fileData.substring(49);
 
@@ -133,7 +175,21 @@ public class CheckGroup {
 
                     chk6 = fileData.substring(55, 56);
                     if (chk6.equals("6")) {
+                        if (fileData.substring(56, 57).equals(" ")) {
+                            fileData = fileData.substring(0, 56) + "//// " + fileData.substring(56);
 
+                        } else if (fileData.substring(57, 58).equals(" ")) {
+                            fileData = fileData.substring(0, 57) + "/// " + fileData.substring(57);
+
+                        } else if (fileData.substring(58, 59).equals(" ")) {
+                            fileData = fileData.substring(0, 58) + "// " + fileData.substring(58);
+
+                        } else if (fileData.substring(59, 60).equals(" ")) {
+                            fileData = fileData.substring(0, 59) + "/ " + fileData.substring(59);
+
+                        } else {
+
+                        }
                     } else {
                         fileData = fileData.substring(0, 55) + "6//// " + fileData.substring(55);
 
@@ -141,7 +197,21 @@ public class CheckGroup {
 
                     chk7 = fileData.substring(61, 62);
                     if (chk7.equals("7")) {
+                        if (fileData.substring(62, 63).equals(" ")) {
+                            fileData = fileData.substring(0, 62) + "//// " + fileData.substring(62);
 
+                        } else if (fileData.substring(63, 64).equals(" ")) {
+                            fileData = fileData.substring(0, 63) + "/// " + fileData.substring(63);
+
+                        } else if (fileData.substring(64, 65).equals(" ")) {
+                            fileData = fileData.substring(0, 64) + "// " + fileData.substring(64);
+
+                        } else if (fileData.substring(65, 66).equals(" ")) {
+                            fileData = fileData.substring(0, 65) + "/ " + fileData.substring(65);
+
+                        } else {
+
+                        }
                     } else {
                         fileData = fileData.substring(0, 61) + "7//// " + fileData.substring(61);
 
@@ -150,16 +220,16 @@ public class CheckGroup {
                     chk8 = fileData.substring(67, 68);
                     if (chk8.equals("8")) {
                         if (fileData.substring(68, 69).equals(" ")) {
-                            fileData = fileData.substring(0, 67) + "8//// " + fileData.substring(67);
+                            fileData = fileData.substring(0, 68) + "//// " + fileData.substring(68);
 
                         } else if (fileData.substring(69, 70).equals(" ")) {
-                            fileData = fileData.substring(0, 69) + "/// " + fileData.substring(70);
+                            fileData = fileData.substring(0, 69) + "/// " + fileData.substring(69);
 
                         } else if (fileData.substring(70, 71).equals(" ")) {
-                            fileData = fileData.substring(0, 70) + "// " + fileData.substring(71);
+                            fileData = fileData.substring(0, 70) + "// " + fileData.substring(70);
 
                         } else if (fileData.substring(71, 72).equals(" ")) {
-                            fileData = fileData.substring(0, 71) + "/ " + fileData.substring(72);
+                            fileData = fileData.substring(0, 71) + "/ " + fileData.substring(71);
 
                         } else {
 
@@ -344,7 +414,6 @@ public class CheckGroup {
                     // System.out.println("Data ---> " + fileData);
                     // System.out.println("Check 58 ---> " + fileData.substring(83, 85));
                     // System.out.println("Check 58 ---> " + fileData.substring(88, 89));
-                    System.out.println(fileData);
                     chk14 = fileData.substring(83, 85);
                     if (chk14.equals("58") || chk14.equals("59") || chk14.equals("5/")) {
 
@@ -535,7 +604,7 @@ public class CheckGroup {
         buffer.close();
         read.close();
         // System.out.println(countRecord);
-        // CheckImportData checkImportData = new CheckImportData();
-        // checkImportData.addToArray(path, countRecord);
+        CheckImportData checkImportData = new CheckImportData();
+        checkImportData.addToArray(path, countRecord);
     }
 }

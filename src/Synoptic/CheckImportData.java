@@ -58,11 +58,11 @@ public class CheckImportData {
         }
         buffer.close();
         read.close();
-        for (int i = 0; i < countRecord; i++) {
+        /*for (int i = 0; i < countRecord; i++) {
             for (int j = 0; j < 43; j++) {
                 //System.out.print(dataArray[i][j] + " ");
             }
-        }
+        }*/
 
         for (int i = 0; i < countRecord; i++) {
             String Day = dataArray[i][1].substring(0, 2);
@@ -96,7 +96,7 @@ public class CheckImportData {
             dataArray[i][1] = Day + "-" + Month + "-" + Year;
 
             try {
-                System.out.println("INSERT INTO WEATHER_REPORT_MYANMAR VALUES('" + dataArray[i][0]
+                System.out.println("INSERT INTO WEATHER_REPORT_VIETNAM VALUES('" + dataArray[i][0]
                         + "',to_date('" + dataArray[i][1] + "','dd/mm/yyyy'),'" + dataArray[i][2] + "','" + dataArray[i][3]
                         + "','" + dataArray[i][4] + "','" + dataArray[i][5] + "','" + dataArray[i][6] + "','" + dataArray[i][7]
                         + "','" + dataArray[i][8] + "','" + dataArray[i][9] + "','" + dataArray[i][10] + "','" + dataArray[i][11]
@@ -109,7 +109,7 @@ public class CheckImportData {
                         + "','" + dataArray[i][38] + "','" + dataArray[i][39] + "','" + dataArray[i][40] + "','" + dataArray[i][41]
                         + "','" + dataArray[i][42] + "')");
                 
-                stat.execute("INSERT INTO WEATHER_REPORT_MYANMAR VALUES('" + dataArray[i][0]
+                stat.execute("INSERT INTO WEATHER_REPORT_VIETNAM VALUES('" + dataArray[i][0]
                         + "',to_date('" + dataArray[i][1] + "','dd/mm/yyyy'),'" + dataArray[i][2] + "','" + dataArray[i][3]
                         + "','" + dataArray[i][4] + "','" + dataArray[i][5] + "','" + dataArray[i][6] + "','" + dataArray[i][7]
                         + "','" + dataArray[i][8] + "','" + dataArray[i][9] + "','" + dataArray[i][10] + "','" + dataArray[i][11]
