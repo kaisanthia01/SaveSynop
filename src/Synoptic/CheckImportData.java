@@ -14,10 +14,29 @@ public class CheckImportData {
 
     CheckConnectDatabase dbCon = new CheckConnectDatabase();
 
-    void addToArray(String path, int countRecord) throws ClassNotFoundException, SQLException, FileNotFoundException, IOException {
+    void addToArray(String path, int countRecord, String codeCountryName) throws ClassNotFoundException, SQLException, FileNotFoundException, IOException {
         Connection con = dbCon.connect();
         Statement stat = con.createStatement();
-        String sql = ("SELECT * FROM WEATHER_REPORT_MYANMAR WHERE ROWNUM = 1 ORDER BY REPORT_ID DESC");
+        String setTableCountryName = null;
+        if (codeCountryName.equals("TH")) {
+            setTableCountryName = "WEATHER_REPORT";
+        } else if (codeCountryName.equals("MM")) {
+            setTableCountryName = "WEATHER_REPORT_MYANMAR";
+        } else if (codeCountryName.equals("LA")) {
+            setTableCountryName = "WEATHER_REPORT_LAOS";
+        } else if (codeCountryName.equals("VN")) {
+            setTableCountryName = "WEATHER_REPORT_VIETNAM";
+        } else if (codeCountryName.equals("MY")) {
+            setTableCountryName = "WEATHER_REPORT_MALAYSIA";
+        } else if (codeCountryName.equals("SG")) {
+            setTableCountryName = "WEATHER_REPORT_SINGAPORE";
+        } else if (codeCountryName.equals("ID")) {
+            setTableCountryName = "WEATHER_REPORT_INDONESIA";
+        } else {
+
+        }
+
+        String sql = ("SELECT * FROM " + setTableCountryName + " WHERE ROWNUM = 1 ORDER BY REPORT_ID DESC");
         ResultSet res = stat.executeQuery(sql);
         String c1 = null;
         while (res.next()) {
@@ -96,7 +115,7 @@ public class CheckImportData {
             dataArray[i][1] = Day + "-" + Month + "-" + Year;
 
             try {
-                System.out.println("INSERT INTO WEATHER_REPORT_VIETNAM VALUES('" + dataArray[i][0]
+                System.out.println("INSERT INTO " + setTableCountryName + " VALUES('" + dataArray[i][0]
                         + "',to_date('" + dataArray[i][1] + "','dd/mm/yyyy'),'" + dataArray[i][2] + "','" + dataArray[i][3]
                         + "','" + dataArray[i][4] + "','" + dataArray[i][5] + "','" + dataArray[i][6] + "','" + dataArray[i][7]
                         + "','" + dataArray[i][8] + "','" + dataArray[i][9] + "','" + dataArray[i][10] + "','" + dataArray[i][11]
@@ -108,8 +127,8 @@ public class CheckImportData {
                         + "','" + dataArray[i][34] + "','" + dataArray[i][35] + "','" + dataArray[i][36] + "','" + dataArray[i][37]
                         + "','" + dataArray[i][38] + "','" + dataArray[i][39] + "','" + dataArray[i][40] + "','" + dataArray[i][41]
                         + "','" + dataArray[i][42] + "')");
-                
-                stat.execute("INSERT INTO WEATHER_REPORT_VIETNAM VALUES('" + dataArray[i][0]
+
+                stat.execute("INSERT INTO " + setTableCountryName + " VALUES('" + dataArray[i][0]
                         + "',to_date('" + dataArray[i][1] + "','dd/mm/yyyy'),'" + dataArray[i][2] + "','" + dataArray[i][3]
                         + "','" + dataArray[i][4] + "','" + dataArray[i][5] + "','" + dataArray[i][6] + "','" + dataArray[i][7]
                         + "','" + dataArray[i][8] + "','" + dataArray[i][9] + "','" + dataArray[i][10] + "','" + dataArray[i][11]
