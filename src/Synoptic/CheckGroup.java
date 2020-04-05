@@ -30,7 +30,7 @@ public class CheckGroup {
 
         while (!eof) {
             fileData = Buff00.readLine();
-            System.out.println(fileData);
+            //System.out.println(fileData);
             if (fileData == null) {
                 eof = true;
             } else {
@@ -41,32 +41,32 @@ public class CheckGroup {
                     if (fileData.substring(13, 14).equals(" ") || fileData.substring(13, 14).equals("`")) {
                         fileData = fileData.substring(0, 13) + "/" + fileData.substring(14);
 
-                    } 
-                    
+                    }
+
                     //check ix
                     if (fileData.substring(14, 15).equals(" ") || fileData.substring(14, 15).equals("`")) {
                         fileData = fileData.substring(0, 14) + "/" + fileData.substring(15);
 
                     }
-                    
+
                     //check h
                     if (fileData.substring(15, 16).equals(" ") || fileData.substring(15, 16).equals("`")) {
                         fileData = fileData.substring(0, 15) + "/" + fileData.substring(16);
 
                     }
-                    
+
                     //check vv1
                     if (fileData.substring(16, 17).equals(" ") || fileData.substring(16, 17).equals("`")) {
                         fileData = fileData.substring(0, 16) + "/" + fileData.substring(17);
 
                     }
-                    
+
                     //check vv2
                     if (fileData.substring(17, 18).equals(" ") || fileData.substring(17, 18).equals("`")) {
-                        fileData = fileData.substring(0, 17) + "/" + fileData.substring(18);
+                        fileData = fileData.substring(0, 17) + "/ " + fileData.substring(18);
 
                     }
-                    
+
                     // check temp
                     chk1 = fileData.substring(25, 27);
                     if (chk1.equals("10") && (fileData.substring(30, 31).equals("="))) {
@@ -456,12 +456,42 @@ public class CheckGroup {
                         fileData = fileData.substring(0, 88) + " 6//// 7////";
 
                     } else if (fileData.substring(89, 90).equals("6")) {
+                        if (fileData.substring(90, 91).equals(" ")) {
+                            fileData = fileData.substring(0, 90) + "//// " + fileData.substring(90);
+
+                        } else if (fileData.substring(91, 92).equals(" ")) {
+                            fileData = fileData.substring(0, 63) + "/// " + fileData.substring(91);
+
+                        } else if (fileData.substring(92, 93).equals(" ")) {
+                            fileData = fileData.substring(0, 92) + "// " + fileData.substring(92);
+
+                        } else if (fileData.substring(93, 94).equals(" ")) {
+                            fileData = fileData.substring(0, 93) + "/ " + fileData.substring(93);
+
+                        } else {
+
+                        }
+
                         String chk17 = fileData.substring(94, 95);
                         if (chk17.equals("=")) {
                             fileData = fileData.substring(0, 94) + " 7////";
 
                         } else if (chk17.equals("7")) {
-                            fileData = fileData.substring(0, 100);
+                            if (fileData.substring(96, 97).equals(" ")) {
+                                fileData = fileData.substring(0, 96) + "////";
+
+                            } else if (fileData.substring(97, 98).equals(" ")) {
+                                fileData = fileData.substring(0, 97) + "///";
+
+                            } else if (fileData.substring(98, 99).equals("")) {
+                                fileData = fileData.substring(0, 98) + "//";
+
+                            } else if (fileData.substring(99, 100).equals(" ")) {
+                                fileData = fileData.substring(0, 99) + "/";
+
+                            } else {
+                                fileData = fileData.substring(0, 100);
+                            }
 
                         } else {
                             fileData = fileData.substring(0, 94) + " 7////";

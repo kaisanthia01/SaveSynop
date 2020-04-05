@@ -74,18 +74,18 @@ public class SynopticSave {
                         //String codeCountryName = "LA";
                         //String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=VLIV&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VLIV");
                         //4.(VN)VIETNAM
-                        String country_code = "48";
-                        String codeCountryName = "VN";
-                        String strURL= ("http://www.gts.tmd.go.th/examtest/all.php?ld=VTBB&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VNNN");
+                        //String country_code = "48";
+                        //String codeCountryName = "VN";
+                        //String strURL= ("http://www.gts.tmd.go.th/examtest/all.php?ld=VTBB&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=VNNN");
                         //5.(MY)MALAYSIA
                         //String country_code = "4896";
                         //String codeCountryName = "MY";
                         //String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=WMKK&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=WMKK");
                         //6.(SG)SINGAPORE
-                        //String country_code = "48";
-                        //String codeCountryName = "SG";
-                        //String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=WSSS&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=WSSS");
-                        
+                        String country_code = "48";
+                        String codeCountryName = "SG";
+                        String strURL = ("http://www.gts.tmd.go.th/examtest/all.php?ld=WSSS&pt=" + yThai + "/Synoptic/" + Day + "-" + Month + Year + ".T" + time[h] + "&sig=WSSS");
+
                         URL synop = new URL(strURL);
                         CheckConnectURL checkStatus = new CheckConnectURL();
                         boolean status = checkStatus.check(strURL);
