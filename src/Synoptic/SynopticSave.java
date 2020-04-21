@@ -109,7 +109,7 @@ public class SynopticSave {
                             } catch (Exception e) {
                                 // System.out.println(e);
                             }
-                            CheckSynoptic.checkSynoptic(Day, Month, Year, time[h], codeCountryName, country_code);
+                            //CheckSynoptic.checkSynoptic(Day, Month, Year, time[h], codeCountryName, country_code);
 
                         } else {
                             System.out.println("URL Connection Failed->" + strURL);
