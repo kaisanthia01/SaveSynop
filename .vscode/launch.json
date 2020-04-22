@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - StringToJson",
+            "request": "launch",
+            "mainClass": "test.StringToJson",
+            "projectName": "SaveSynop_40a8ae1d"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SynopticSave",
             "request": "launch",
             "mainClass": "Synoptic.SynopticSave",
