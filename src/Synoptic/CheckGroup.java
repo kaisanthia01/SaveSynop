@@ -476,23 +476,26 @@ public class CheckGroup {
                         if (chk17.equals("=")) {
                             fileData = fileData.substring(0, 94) + " 7////";
 
-                        } else if (chk17.equals("7")) {
-                            if (fileData.substring(96, 97).equals(" ")) {
-                                fileData = fileData.substring(0, 96) + "////";
+                        } else if (chk17.equals(" ")) {
+                            if (fileData.substring(95, 96).equals("7")) {
+                                if (fileData.substring(96, 97).equals(" ")) {
+                                    fileData = fileData.substring(0, 96) + "////";
 
-                            } else if (fileData.substring(97, 98).equals(" ")) {
-                                fileData = fileData.substring(0, 97) + "///";
+                                } else if (fileData.substring(97, 98).equals(" ")) {
+                                    fileData = fileData.substring(0, 97) + "///";
 
-                            } else if (fileData.substring(98, 99).equals("")) {
-                                fileData = fileData.substring(0, 98) + "//";
+                                } else if (fileData.substring(98, 99).equals("")) {
+                                    fileData = fileData.substring(0, 98) + "//";
 
-                            } else if (fileData.substring(99, 100).equals(" ")) {
-                                fileData = fileData.substring(0, 99) + "/";
+                                } else if (fileData.substring(99, 100).equals(" ")) {
+                                    fileData = fileData.substring(0, 99) + "/";
 
+                                } else {
+                                    fileData = fileData.substring(0, 100);
+                                }
                             } else {
-                                fileData = fileData.substring(0, 100);
+                                fileData = fileData.substring(0, 94) + " 7////";
                             }
-
                         } else {
                             fileData = fileData.substring(0, 94) + " 7////";
                         }
@@ -664,7 +667,7 @@ public class CheckGroup {
         buffer.close();
         read.close();
         // System.out.println(countRecord);
-        CheckImportData checkImportData = new CheckImportData();
-        checkImportData.addToArray(path, countRecord, codeCountryName);
+        //CheckImportData checkImportData = new CheckImportData();
+        //checkImportData.addToArray(path, countRecord, codeCountryName);
     }
 }
