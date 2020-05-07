@@ -83,6 +83,7 @@ public class CheckImportData {
             }
         }*/
 
+        int CountRowImport = 0;
         for (int i = 0; i < countRecord; i++) {
             String Day = dataArray[i][1].substring(0, 2);
             String Month = dataArray[i][1].substring(3, 6);
@@ -141,6 +142,7 @@ public class CheckImportData {
                         + "','" + dataArray[i][38] + "','" + dataArray[i][39] + "','" + dataArray[i][40] + "','" + dataArray[i][41]
                         + "','" + dataArray[i][42] + "')");
 
+                CountRowImport++;
             } catch (SQLException e) {
                 System.out.println(e);
                 continue;
@@ -148,6 +150,7 @@ public class CheckImportData {
         }
         con.close();
         stat.close();
+        System.out.print("CountRowImportDataSuccess --> " + CountRowImport + " | ");
         System.out.println("<!-- import data Success -->");
     }
 }

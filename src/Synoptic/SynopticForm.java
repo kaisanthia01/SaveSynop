@@ -141,6 +141,11 @@ public class SynopticForm extends javax.swing.JFrame {
     jDateChooser.setFormat(2);
     jDateChooser.setFieldFont(new java.awt.Font("TH SarabunPSK", java.awt.Font.BOLD, 20));
     jDateChooser.setLocale(new java.util.Locale("en", "GB", ""));
+    jDateChooser.addSelectionChangedListener(new datechooser.events.SelectionChangedListener() {
+        public void onSelectionChange(datechooser.events.SelectionChangedEvent evt) {
+            jDateChooserOnSelectionChange(evt);
+        }
+    });
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
@@ -266,11 +271,11 @@ public class SynopticForm extends javax.swing.JFrame {
 
                 String nohtml = sb.toString().replaceAll("\\<.*?>", "");
 
-                FileWriter fw = new FileWriter("D:\\DataSynoptic\\" + codeCountryName + "\\" + data[0] + data[1].toUpperCase() + Year + hour + "_" + codeCountryName + ".txt");
+                FileWriter fw = new FileWriter("D:\\DataSynoptic\\" + codeCountryName + "\\" + data[0] + data[1].toUpperCase() + data[2] + hour + "_" + codeCountryName + ".txt");
                 fw.write(nohtml);
                 fw.close();
 
-                CheckSynoptic.checkSynoptic(data[0], data[1].toUpperCase(), Year, hour, codeCountryName, country_code);
+                CheckSynoptic.checkSynoptic(data[0], data[1].toUpperCase(), data[2], hour, codeCountryName, country_code);
 
                 JOptionPane.showMessageDialog(this, "Synoptic Save Success");
                 if (hour.equals("00")) {
@@ -335,6 +340,20 @@ public class SynopticForm extends javax.swing.JFrame {
             Logger.getLogger(SynopticForm.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jDateChooserOnSelectionChange(datechooser.events.SelectionChangedEvent evt) {//GEN-FIRST:event_jDateChooserOnSelectionChange
+        // TODO add your handling code here:
+        jTextField1.setBackground(Color.WHITE);
+        jTextField2.setBackground(Color.WHITE);
+        jTextField3.setBackground(Color.WHITE);
+        jTextField4.setBackground(Color.WHITE);
+        jTextField5.setBackground(Color.WHITE);
+        jTextField6.setBackground(Color.WHITE);
+        jTextField7.setBackground(Color.WHITE);
+        jTextField8.setBackground(Color.WHITE);
+        
+        jComboBoxTime.setSelectedIndex(0);
+    }//GEN-LAST:event_jDateChooserOnSelectionChange
 
     /**
      * @param args the command line arguments
